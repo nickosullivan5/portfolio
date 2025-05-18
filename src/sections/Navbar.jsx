@@ -8,10 +8,7 @@ const Navbar = () => {
                     <a href="/" className=" text-4xl text-black font-bold hover:text-white transition-colors">
                             nos portfolio
                     </a>
-                    <b>
-                    left_brain
-                    right_brain
-                    </b>
+
                 </div>
             </div>
             <hr className="mt-2 mx-auto pt-0" />

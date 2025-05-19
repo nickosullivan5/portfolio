@@ -2,18 +2,19 @@ import React from 'react'
 
 const WorkExperience = () => {
     return (
-        <main className="max-w-6xl mx-auto border-1 z-1">
+        <main className="max-w-6xl mx-auto z-1 p-2 rounded-l ">
             <div  className=" text-3xl text-black font-bold ">
-                work experience
+                Work Experience
             </div>
             <div>
-                Bain Capital
+              <b>Bain Capital</b> Applications Developer Co-op July-December 2024  <img class="h-8 max-w-full" src="../public/bain_logo.png" alt="Work Experience" />
             </div>
             <div>
-                McKay Brothers
+                <b>McKay Brothers</b> Programming Intern: Information Systems September-December 2023
+                <img className="h-40 max-w-full" src="../public/mckay_logo.png" alt="Work Experience"/>
             </div>
             <div>
-               No People Recording Studio
+                <b>No People Recording Studio</b> Art Director September 2022-2023
             </div>
         </main>
     )

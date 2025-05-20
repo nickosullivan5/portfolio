@@ -21,8 +21,10 @@ function App() {
             <WorkExperience/>
                 </FadeOnScroll>
 
-                <Education />
+                {/*<Education />*/}
+              <FadeOnScroll>
             <TechStack/>
+              </FadeOnScroll>
 
 
             <Projects/>

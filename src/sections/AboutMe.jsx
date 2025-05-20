@@ -37,7 +37,7 @@ const AboutMe = () => {
 
 
 return (
-    <motion.div onMouseMove={handleMouseMove}  onMouseLeave={handleMouseLeave} className="relative"
+    <motion.div onMouseMove={handleMouseMove}  onMouseLeave={handleMouseLeave} className="relative "
                 style={{
         transformStyle: "preserve-3d"
                     ,rotateX,
@@ -57,7 +57,7 @@ return (
                 </video>
 
                 <div
-                    className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-start text-white bg-black/50  p-6 space-y-1">
+                    className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-start text-white bg-black/50 p-6 space-y-1">
                     <h1 className="text-4xl md:text-6xl font-bold">Nicholas O'Sullivan</h1>
                     <div className="text-lg md:text-2xl flex gap-4 items-center">
                         <IoMailOpen/>

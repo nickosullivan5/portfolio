@@ -15,7 +15,7 @@ import {DiMysql} from "react-icons/di";
 const TechStack = () => {
     return (
         <main className="max-w-6xl mx-auto p-4">
-            <div  className=" text-3xl  font-bold ">
+            <div  className=" text-2xl  font-bold ">
                 Technology
             </div>
             <div className="text-3xl text-shadow-cyan-950 text-shadow-2xl flex flex-wrap gap-6 pt-3">

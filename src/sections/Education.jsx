@@ -9,7 +9,7 @@ const Education = () => {
                 {educationData.map((item, index) => (
                     <div key={index} className="relative   ">
                         {/* Dot */}
-                        <div className="absolute -left-3 top-1 w-5 h-5 bg-black rounded-full border-2 border-white" />
+                        <div className="absolute -left-3 top-1 w-4 h-4 bg-black rounded-full border-2 border-white" />
                         <div className="flex items-start gap-4 pl-2">
 
                         {/* Content */}

@@ -9,8 +9,8 @@ const FadeOnScroll = ({ children }) => {
             if (!ref.current) return;
 
             const rect = ref.current.getBoundingClientRect();
-            const fadeStart = 100; // top of the viewport
-            const fadeEnd = 0; // pixels above which fade completes
+            const fadeStart = -100  ; // top of the viewport
+            const fadeEnd = 300; // pixels above which fade completes
 
             if (rect.top < fadeStart) {
                 const fadeAmount = Math.max(0, 1 - Math.abs(rect.top) / fadeEnd);
@@ -25,7 +25,7 @@ const FadeOnScroll = ({ children }) => {
     }, []);
 
     return (
-        <div ref={ref} style={{ opacity, transition: "opacity 0.4s " }}>
+        <div ref={ref} style={{ opacity, transition: "opacity 0.5s " }}>
             {children}
         </div>
     );

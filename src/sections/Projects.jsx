@@ -14,7 +14,7 @@ const Projects = () => {
 
     return (
         <main className="max-w-6xl mx-auto border-1 z-1">
-            <div className="text-3xl text-black font-bold">
+            <div className="text-3xl  font-bold">
                 recent projects
             </div>
             <div>DesignerFinder: Secondhand Designer Clothing Proxy Site</div>

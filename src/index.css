@@ -15,8 +15,9 @@
 }
 
 body {
-  background: #e6e6e6;
+  background: #fdf9fa;
   font-family: 'Helvetica', sans-serif;
+  color: #1c141a;
 }
 
 /*@layer utilities {*/

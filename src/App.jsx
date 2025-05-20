@@ -9,10 +9,10 @@ import FadeOnScroll from "./sections/FadeOnScroll.jsx";
 function App() {
   return (
       <main className="max-w-6xl mx-auto"
-
       >
-        <Navbar className="z-50 "/>
-        <div className="pt-30 max-w-3xl mx-auto">
+
+          <Navbar />
+          <div className="pt-10 md:pt-20 max-w-3xl mx-auto">
             <FadeOnScroll>
             <AboutMe/>
           </FadeOnScroll>

@@ -10,13 +10,25 @@
   font-weight: normal;
   src: local('Helvetica'), url('../public/fonts/Helvetica-Regular.ttf') format('ttf');
 }
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Helvetica Neue'), url('../public/fonts/HelveticaNeue-Regular.otf') format('otf');
+}
+@font-face {
+  font-family: 'PP Neue Montreal Book';
+  font-style: normal;
+  font-weight: normal;
+  src: local('PP Neue Montreal Book'), url('../public/fonts/ppneuemontreal-book.woff') format('woff');
+}
 * {
   scroll-behavior: smooth;
 }
 
 body {
   background: #fdf9fa;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Helvetica Neue', 'PP Neue Montreal Book', 'Helvetica', sans-serif;
   color: #1c141a;
 }
 

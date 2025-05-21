@@ -29,7 +29,7 @@ const workData = [
 const ExperienceAndEducation = () => {
     return (
         <main className="max-w-6xl mx-auto p-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 {/* Work Experience */}
                 <section>
                     <h2 className="text-2xl font-bold mb-4">Experience</h2>

@@ -1,4 +1,34 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
+
+const projects = [
+    {
+        title: "Director Portfolio – May 2025",
+        description: "Reel of recent directing & editing work.",
+        type: "vimeo",
+        media: "https://player.vimeo.com/video/1085496624"
+    },
+    {
+        title: "DesignerFinder",
+        description: "Secondhand Designer Clothing Proxy Site",
+        type: "image",
+        media: "/train_graf.gif", // Replace with an actual image path
+        link: "https://designerfinder.io" // Optional
+    },
+
+    {
+        title: "Husksheets",
+        description: "Spreadsheet Editor for Northeastern Huskies",
+        type: "link",
+        media: "/train_graf.gif", // Replace with an image
+        link: "https://github.com/arinjay-singh/husksheets"
+    },
+    {
+        title: "Seeing Stars RMX",
+        description: "song & MV produced by me",
+        type: "youtube",
+        media: "https://www.youtube.com/embed/XkhXASEaMZU?autoplay=1&color=white&disablekb=1&fs=0&rel=0",
+    }
+];
 
 const Projects = () => {
     useEffect(() => {
@@ -13,38 +43,58 @@ const Projects = () => {
     }, []);
 
     return (
-        <main className="max-w-6xl mx-auto border-1 z-1">
-            <div className="text-3xl  font-bold">
-                recent projects
-            </div>
-            <div>DesignerFinder: Secondhand Designer Clothing Proxy Site</div>
-            <div>
-                5.18.2025 Latest Director portfolio
-                <div style={{padding: '56.25% 0 0 0', position: 'relative'}}>
-                    <iframe
-                        src="https://player.vimeo.com/video/1085496624?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                        frameBorder="0"
-                        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                        style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
-                        // title="nos dir portfolio 2025"
-                    ></iframe>
-                </div>
-            </div>
-            <div>
-                <a href="https://github.com/arinjay-singh/husksheets"
-                   className="text-blue-300 underline hover:text-white transition-colors">
-                    Husksheets, the Spreadsheet Editor for Northeastern Huskies
-                </a>
-            </div>
-            <div>paris amanni - Seeing Stars RMX (produced + directed by me)
-                <div style={{ position: 'relative'}}>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XkhXASEaMZU?si=wl-oNSmFWf6Y1M2w"
-                            title="YouTube video player" frameBorder="0"
-                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-                            referrerPolicy="strict-origin-when-cross-origin"
-                            allowFullScreen></iframe>
-                </div>
+        <main className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6">recent projects</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1">
+                {projects.map((project, index) => (
+                    <div
+                        key={index}
+                        className="relative group overflow-hidden  shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    >
+                        {/* Media Block */}
+                        {project.type === "vimeo" && (
+                            <div className="aspect-video">
+                                <iframe
+                                    src={`${project.media}?badge=0&autopause=0`}
+                                    frameBorder="0"
+                                    // allow="autoplay; fullscreen; picture-in-picture"
+                                    className="w-full h-full"
+                                />
+                            </div>
+                        )}
 
+                        {project.type === "youtube" && (
+                            <div className="aspect-video">
+                                <iframe
+                                    src={project.media}
+                                    frameBorder="0"
+                                    allow="autoplay; fullscreen; picture-in-picture"
+                                    className="w-full h-full"
+                                    allowFullScreen
+                                />
+                            </div>
+                        )}
+
+                        {project.type === "image" || project.type === "link" ? (
+                            <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                <img
+                                    src={project.media}
+                                    alt={project.title}
+                                    className="w-full h-full object-cover"
+                                />
+                            </a>
+                        ) : null}
+
+                        {/* Text Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-0 opacity-0 group-hover:opacity-60 text-white p-4 flex flex-col justify-center transition-opacity duration-300 pointer-events-none">
+                            <div className="pointer-events-none">
+                                <h3 className="text-lg font-semibold">{project.title}</h3>
+                                <p className="text-sm">{project.description}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                ))}
             </div>
         </main>
     );

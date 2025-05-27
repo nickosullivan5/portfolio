@@ -4,6 +4,7 @@ import WorkExperience from "./sections/WorkExperience.jsx";
 import Projects from "./sections/Projects.jsx";
 import TechStack from "./sections/TechStack.jsx";
 import FadeOnScroll from "./sections/FadeOnScroll.jsx";
+import Footer from "./sections/Footer.jsx";
 import {useEffect, useState} from "react";
 
 function App() {
@@ -43,8 +44,9 @@ function App() {
           <div
               className={`transition-opacity duration-2000 ${loading ? "opacity-0" : "opacity-100"}`}
           >
-              <Navbar />
-              <div className="pt-10 md:pt-20 max-w-3xl mx-auto">
+              <div className="pt-15 md:pt-15 max-w-3xl mx-auto">
+                  <Navbar />
+
                   <FadeOnScroll>
                       <AboutMe />
                   </FadeOnScroll>
@@ -57,6 +59,9 @@ function App() {
                   {/*<Education />*/}
                   <FadeOnScroll>
                       <Projects />
+                  </FadeOnScroll>
+                  <FadeOnScroll>
+                      <Footer />
                   </FadeOnScroll>
 
               </div>

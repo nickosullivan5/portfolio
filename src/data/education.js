@@ -5,6 +5,7 @@ export const educationData = [
         period: '2021 – 2025',
         logo: '/northeastern_logo.png',
         logoHeight: 'h-10',
+        url: 'https://www.northeastern.edu/about/about-northeastern/',
     },
     {
         title: 'Fiorello H. LaGuardia High School',
@@ -12,5 +13,6 @@ export const educationData = [
         period: '2017 – 2021',
         logo: '/laguardia_logo.svg',
         logoHeight: 'h-10',
+        url: 'https://www.laguardiahs.org/',
     },
 ];

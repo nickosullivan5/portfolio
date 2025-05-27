@@ -4,14 +4,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/*@font-face {*/
+/*  font-family: 'Helvetica';*/
+/*  font-style: normal;*/
+/*  font-weight: normal;*/
+/*  src: local('Helvetica'), url('../public/fonts/Helvetica-Regular.ttf') format('ttf');*/
+/*}*/
 @font-face {
-  font-family: 'Helvetica';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Helvetica'), url('../public/fonts/Helvetica-Regular.ttf') format('ttf');
-}
-@font-face {
-  font-family: 'Helvetica';
+  font-family: 'Helvetica Neue';
   font-style: normal;
   font-weight: normal;
   src: local('Helvetica Neue'), url('../public/fonts/HelveticaNeue-Regular.otf') format('otf');
@@ -28,7 +28,7 @@
 
 body {
   background: #fdf9fa;
-  font-family: 'Helvetica Neue', 'PP Neue Montreal Book', 'Helvetica', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   color: #1c141a;
 }
 

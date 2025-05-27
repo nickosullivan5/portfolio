@@ -37,12 +37,17 @@ const AboutMe = () => {
 
 
 return (
-    <motion.div onMouseMove={handleMouseMove}  onMouseLeave={handleMouseLeave} className="relative "
-                style={{
-        transformStyle: "preserve-3d"
-                    ,rotateX,
-                    rotateY
-    }}>
+    <motion.div
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        className="relative"
+        style={{
+            // perspective: 1000,
+            transformStyle: "preserve-3d",
+            rotateX,
+            rotateY
+        }}
+    >
         <div className="  inset place-content-center shadow-lg"
              style={{transform: "translateZ(75px)", transformStyle: "preserve-3d"}}>
             <main className="max-w-5xl mx-auto relative  p-2 rounded-sm overflow-hidden">
@@ -57,15 +62,11 @@ return (
                 </video>
 
                 <div
-                    className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-start text-white bg-black/50 p-6 space-y-1">
+                    className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-start text-white bg-black/50 p-6 space-y-1 pointer-events-auto"
+                >
                     <h1 className="text-4xl md:text-6xl font-bold">Nicholas O'Sullivan</h1>
-                    <div className="text-lg md:text-2xl flex gap-4 items-center">
-                        <IoMailOpen/>
-                        <GoDot className="text-lg"/>
-                        <FaLinkedinIn/>
-                        <GoDot/>
-                        <FaGithub/>
-                    </div>
+
+
 
                     <div className="text-md md:text-xl font-bold flex items-center gap-2">
                         Queens, NYC <IoLocationOutline className="text-red-500"/>
@@ -74,8 +75,8 @@ return (
                     <p className="text-sm md:text-lg max-w-xl">
                         Software Engineer with a history in audiovisual production.
                     </p>
-
                 </div>
+
             </main>
         </div>
     </motion.div>
